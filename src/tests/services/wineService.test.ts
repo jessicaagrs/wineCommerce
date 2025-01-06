@@ -51,12 +51,16 @@ describe('wine - service', () => {
 
   test('should return an error if the API fails', async () => {
     // Arrange
-    jest.spyOn(axios, 'get').mockRejectedValue(new ApiError('API error', 500, 'Falha ao buscar os vinhos'));
+    jest
+      .spyOn(axios, 'get')
+      .mockRejectedValue(
+        new ApiError('API error', 500, 'Falha ao buscar os vinhos'),
+      );
 
     // Act
     try {
       await getWineList();
-    } catch (error : any) {
+    } catch (error: any) {
       // Assert
       expect(error).toBeInstanceOf(ApiError);
       expect(error).toHaveProperty('message');

@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --c1: #555555;
+  --c2: #d14b8f;
+  --c3: #f5f5f5;
+  --c4: #ffffff;
+  --c5: #cccccc;
+}
