@@ -1,3 +1,4 @@
+import ApiError from '@/service/model/error';
 import getWineList from '@/service/wineService';
 import { describe, expect, jest, test } from '@jest/globals';
 import axios from 'axios';
@@ -35,5 +36,32 @@ describe('wine - service', () => {
     expect(result[0]).toHaveProperty('location');
     expect(result[0]).toHaveProperty('image');
     expect(result[0]).toHaveProperty('id');
+  });
+
+  test('should return an empty list if the API does not return any data', async () => {
+    // Arrange
+    jest.spyOn(axios, 'get').mockResolvedValue({ data: [] });
+
+    // Act
+    const result = await getWineList();
+
+    // Assert
+    expect(result).toEqual([]);
+  });
+
+  test('should return an error if the API fails', async () => {
+    // Arrange
+    jest.spyOn(axios, 'get').mockRejectedValue(new ApiError('API error', 500, 'Falha ao buscar os vinhos'));
+
+    // Act
+    try {
+      await getWineList();
+    } catch (error : any) {
+      // Assert
+      expect(error).toBeInstanceOf(ApiError);
+      expect(error).toHaveProperty('message');
+      expect(error).toHaveProperty('statusCode');
+      expect(error).toHaveProperty('details');
+    }
   });
 });
