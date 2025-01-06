@@ -1,0 +1,21 @@
+.containerList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 100%;
+}
+
+.itemList {
+  text-decoration: none;
+  color: var(--c1);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.itemList:hover {
+  color: var(--c2);
+}
