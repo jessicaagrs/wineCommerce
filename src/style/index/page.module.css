@@ -1,3 +1,9 @@
 body {
   background-color: var(--c3);
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 25px 80px;
+}
