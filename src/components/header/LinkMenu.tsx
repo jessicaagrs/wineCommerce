@@ -1,32 +1,33 @@
+import Link from 'next/link';
 import styles from '../../style/components/header/linkmenu.module.css';
 
 export const LinkMenu = () => {
   return (
     <ul className={styles.containerList}>
-      <li>
-        <a href="#Home" className={styles.itemList}>
+      <li className={styles.item}>
+        <Link href="/" className={styles.itemList}>
           Clube
-        </a>
+        </Link>
       </li>
-      <li>
-        <a href="#Loja" className={styles.itemList}>
+      <li className={styles.item}>
+        <Link href="/" className={styles.itemList}>
           Loja
-        </a>
+        </Link>
       </li>
-      <li>
-        <a href="#Produtores" className={styles.itemList}>
+      <li className={styles.item}>
+        <Link href="/" className={styles.itemList}>
           Produtores
-        </a>
+        </Link>
       </li>
-      <li>
-        <a href="#Ofertas" className={styles.itemList}>
+      <li className={styles.item}>
+        <Link href="/" className={styles.itemList}>
           Ofertas
-        </a>
+        </Link>
       </li>
-      <li>
-        <a href="#Eventos" className={styles.itemList}>
+      <li className={styles.item}>
+        <Link href="/" className={styles.itemList}>
           Eventos
-        </a>
+        </Link>
       </li>
     </ul>
   );

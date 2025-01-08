@@ -19,3 +19,23 @@
 .itemList:hover {
   color: var(--c2);
 }
+
+.item {
+  position: relative;
+}
+
+.containerList .item:nth-of-type(2) .itemList {
+  color: var(--c2);
+}
+
+.containerList .item:nth-of-type(2) .itemList::after {
+  content: " ";
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--c2);
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  border-radius: 12px;
+}
