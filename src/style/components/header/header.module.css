@@ -1,8 +1,8 @@
 .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  padding: 25px 80px;
+  padding: 20px 80px;
   background-color: var(--c4);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -11,4 +11,6 @@
   display: flex;
   align-items: center;
   gap: 30px;
+  justify-self: end;
+  grid-column: 3 / 5;
 }
