@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../../style/components/header/searchHeader.module.css';
+import styles from '@/style/components/header/searchHeader.module.css';
 
 export const SearchHeader = () => {
   return (

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Roboto, Poppins } from 'next/font/google';
-import '../style/globals.css';
+import '@/style/globals.css';
 import DefaultProvider from '@/contexts/DefaultProvider';
 
 const roboto = Roboto({
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className} ${poppins.className}`}>
+      <body className={`${roboto.className} ${poppins.className} marginBody`}>
         <DefaultProvider>{children}</DefaultProvider>
       </body>
     </html>

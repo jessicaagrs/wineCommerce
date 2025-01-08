@@ -1,5 +1,5 @@
-import { RadioButton } from './RadioButton';
-import styles from '../../style/components/filters/filter.module.css';
+import { RadioButton } from '@/components/filters/RadioButton';
+import styles from '@/style/components/filters/filter.module.css';
 
 export default function Filter() {
   return (
