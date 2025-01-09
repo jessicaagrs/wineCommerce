@@ -1,4 +1,4 @@
-import styles from "@/style/components/filters/radioButton.module.css"
+import styles from '@/style/components/filters/radioButton.module.css';
 
 type RadioButtonProps = {
   label: string;

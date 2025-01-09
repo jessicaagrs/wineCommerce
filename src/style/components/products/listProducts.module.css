@@ -1,0 +1,21 @@
+.title {
+  display: flex;
+  gap: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.titleQuantity {
+  font-weight: 700;
+}
+
+.container {
+  grid-column: 2 / 4;
+}
+
+.containerList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px 20px;
+}

@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className} ${poppins.className} marginBody`}>
+      <body className={`${roboto.className} ${poppins.className} body`}>
         <DefaultProvider>{children}</DefaultProvider>
       </body>
     </html>

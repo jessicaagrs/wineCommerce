@@ -1,5 +1,6 @@
-.marginBody {
+.body {
   background-color: var(--c3);
+  color: var(--c7);
 }
 
 .grid {
