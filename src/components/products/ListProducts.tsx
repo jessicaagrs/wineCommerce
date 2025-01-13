@@ -2,7 +2,7 @@
 
 import useWineList from '@/hooks/useWineList';
 import ProductItem from './ProductItem';
-import styles from '@/style/components/products/listProducts.module.css'
+import styles from '@/style/components/products/listProducts.module.css';
 
 export default function ListProducts() {
   const { data, error, isError, isPending } = useWineList(1);

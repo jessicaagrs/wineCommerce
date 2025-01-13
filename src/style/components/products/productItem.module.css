@@ -1,106 +1,112 @@
 .container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: Roboto, sans-serif;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  gap: 30px;
 }
 
 .containerInfo {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .image {
-    max-width: 100%;
-    width: 100%;
-    height: 300px;
-    object-fit: scale-down;
-    padding: 5px 0 0 0;
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+  object-fit: scale-down;
+  padding: 5px 0 0 0;
 }
 
 .description {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    max-width: 60ch;
-    text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  max-width: 60ch;
+  text-align: center;
 }
 
-.containerInfo, .containerPromotion, .containerSocio {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.containerInfo,
+.containerPromotion,
+.containerSocio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.containerPromotion span:nth-child(1){
-    color: var(--c8);
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
+.containerPromotion span:nth-child(1) {
+  color: var(--c8);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
 }
 
-.containerPromotion span:nth-child(2){
-    font-size: 14px;
-    line-height: 16px;
-    background-color: var(--c9);
-    color: var(--c4);
-    padding: 2px 5px;
-    border-radius: 5px;
-    font-weight: 700;
+.containerPromotion span:nth-child(2) {
+  font-size: 14px;
+  line-height: 16px;
+  background-color: var(--c9);
+  color: var(--c4);
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
-.containerSocio span:nth-child(1){
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
+.containerSocio span:nth-child(1) {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.containerSocio span:nth-child(2){
-    font-size: 28px;
-    line-height: 32px;
-    font-weight: 700;
-    color: var(--c10);
+.containerSocio span:nth-child(2) {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--c10);
 }
 
 .textNaoSocio {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 700;
-    color: var(--c8);
-    text-transform: uppercase;
-    margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: var(--c8);
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .containerBtn {
-    width: 100%;
+  width: 100%;
 }
 
 .btnAddCart {
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: var(--c11);
-    border: none;
-    border-radius: 8px;
-    color: var(--c4);
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
-    background-image: linear-gradient(to right, rgb(61, 179, 15) 0%, #7EBC43 100%);
-    transition: 0.8s;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: var(--c11);
+  border: none;
+  border-radius: 8px;
+  color: var(--c4);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right,
+    rgb(61, 179, 15) 0%,
+    #7ebc43 100%
+  );
+  transition: 0.8s;
 }
 
 .btnAddCart:hover {
-    background-color: var(--c10);
-    background-image: none;
-    background-image: linear-gradient(to right, #db3292 0%, #B6116E 100%);
+  background-color: var(--c10);
+  background-image: none;
+  background-image: linear-gradient(to right, #db3292 0%, #b6116e 100%);
 }

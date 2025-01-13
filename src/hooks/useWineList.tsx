@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 
 export default function useWineList(page: number, limit: number = 50) {
   const { isPending, isError, data, error } = useQuery({
-    queryKey: ['wines'],
+    queryKey: ['wines', page],
     queryFn: getWineList,
   });
 
