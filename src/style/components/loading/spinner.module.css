@@ -2,12 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  grid-column: 2 / 4;
 }
 
 .loader {
   border-width: 0.5rem;
   border-style: solid;
-  border-color: purple purple purple purple;
+  border-color: var(--c10);
   width: 3.625rem;
   height: 3.625rem;
   border-radius: 50%;
@@ -22,7 +24,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background: purple;
+  background: var(--c10);
   position: absolute;
   left: 0.125rem;
 }
