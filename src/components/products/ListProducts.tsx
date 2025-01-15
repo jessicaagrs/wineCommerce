@@ -1,13 +1,16 @@
 'use client';
 
+import usePaginationContext from '@/hooks/usePaginationContext';
 import useWineList from '@/hooks/useWineList';
 import styles from '@/style/components/products/listProducts.module.css';
-import ProductItem from './ProductItem';
-import Pagination from '../pagination/Pagination';
 import { Spinner } from '../loading/Spinner';
+import Pagination from '../pagination/Pagination';
+import ProductItem from './ProductItem';
 
 export default function ListProducts() {
-  const { data, error, isError, isPending } = useWineList(1);
+  const { currentPage } = usePaginationContext();
+  console.log(currentPage);
+  const { data, error, isError, isPending } = useWineList(currentPage);
 
   if (isPending) return <Spinner />;
 
