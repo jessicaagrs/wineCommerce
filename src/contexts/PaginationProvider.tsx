@@ -16,7 +16,7 @@ interface ProviderProps {
 }
 
 export function PaginationContextProvider({ children }: ProviderProps) {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(15);
   const [typeFilter, setTypeFilter] = useState(TypeFilter.NOFILTER);
   const [totalPages, setTotalPages] = useState(0);
 

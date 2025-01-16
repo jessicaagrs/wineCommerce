@@ -4,25 +4,51 @@ import styles from '@/style/components/pagination/pagination.module.css';
 export default function Pagination() {
   const { currentPage, setCurrentPage, totalPages } = usePaginationContext();
 
+  const generatePageNumbers = () => {
+    const startPage = currentPage;
+    const endPage = Math.min(currentPage + 2, totalPages);
+    const pages = [];
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i);
+    }
+    return pages;
+  };
+
   return (
     <div className={styles.container}>
       <div>
-        {currentPage != 1 && (
-          <button className={styles.btnText}>{'<<'} Anterior</button>
+        {currentPage != 1 && currentPage <= totalPages && (
+          <button
+            className={styles.btnText}
+            onClick={() => setCurrentPage(currentPage - 1)}
+          >
+            {'<<'} Anterior
+          </button>
         )}
       </div>
       <div className={styles.containerBtnNumber}>
-        <button className={`${styles.btnNumber} ${styles.btnFocus}`}>1</button>
-        <button className={styles.btnNumber}>2</button>
-        <button className={styles.btnNumber}>3</button>
+        {generatePageNumbers().map((page) => (
+          <button
+            key={page}
+            className={`${styles.btnNumber} ${currentPage === page ? styles.btnFocus : ''}`}
+            onClick={() => setCurrentPage(page)}
+          >
+            {page}
+          </button>
+        ))}
       </div>
-      {((currentPage < totalPages) && (totalPages > 1)) && (
+      {currentPage < totalPages && totalPages > 1 && (
         <>
           <div>
             <p className={styles.caractere}>...</p>
           </div>
           <div>
-            <button className={styles.btnText}>Próximo {'>>'}</button>
+            <button
+              className={styles.btnText}
+              onClick={() => setCurrentPage(currentPage + 1)}
+            >
+              Próximo {'>>'}
+            </button>
           </div>
         </>
       )}

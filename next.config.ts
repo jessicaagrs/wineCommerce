@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'images.vivino.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'thumbs.vivino.com',
+      },
     ],
   },
 };
