@@ -8,8 +8,7 @@ import Pagination from '../pagination/Pagination';
 import ProductItem from './ProductItem';
 
 export default function ListProducts() {
-  const { currentPage } = usePaginationContext();
-  console.log(currentPage);
+  const { currentPage, totalPages } = usePaginationContext();
   const { data, error, isError, isPending } = useWineList(currentPage);
 
   if (isPending) return <Spinner />;
@@ -23,7 +22,7 @@ export default function ListProducts() {
       <div className={styles.containerList}>
         {data?.map((wine) => <ProductItem key={wine.id} wine={wine} />)}
       </div>
-      <Pagination />
+      {totalPages > 1 && <Pagination />}
     </div>
   );
 }
