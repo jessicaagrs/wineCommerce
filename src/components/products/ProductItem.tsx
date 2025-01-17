@@ -1,7 +1,7 @@
-import { Wine } from '@/types/wineModel';
-import Image from 'next/image';
 import styles from '@/style/components/products/productItem.module.css';
+import { Wine } from '@/types/wineModel';
 import { formatCurrency } from '@/utils/formatter';
+import Image from 'next/image';
 
 type ProductItemProps = {
   readonly wine: Wine;

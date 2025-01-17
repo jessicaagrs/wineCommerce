@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import styles from '@/style/components/header/linkmenu.module.css';
+import Link from 'next/link';
 
 export const LinkMenu = () => {
   return (

@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
-import { Roboto, Poppins } from 'next/font/google';
-import '@/style/globals.css';
 import DefaultProvider from '@/contexts/DefaultProvider';
+import '@/style/globals.css';
+import type { Metadata } from 'next';
+import { Poppins, Roboto } from 'next/font/google';
 
 const roboto = Roboto({
   weight: '400',

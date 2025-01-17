@@ -1,7 +1,7 @@
 import getWineList from '@/service/wineService';
 import { useQuery } from '@tanstack/react-query';
-import usePaginationContext from './usePaginationContext';
 import { useEffect } from 'react';
+import usePaginationContext from './usePaginationContext';
 
 export default function useWineList(page: number, limit: number = 50) {
   const { setTotalPages } = usePaginationContext();

@@ -1,6 +1,6 @@
+import ApiError from '@/service/model/error';
 import { Wine } from '@/types/wineModel';
 import axios from 'axios';
-import ApiError from '@/service/model/error';
 
 export default async function getWineList() {
   try {
