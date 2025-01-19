@@ -2,6 +2,7 @@ import styles from '@/style/components/header/searchHeader.module.css';
 import Image from 'next/image';
 
 export const SearchHeader = () => {
+  // TODO : Implementar a lógica de busca
   return (
     <div className={styles.searchBox}>
       <button className={styles.btnSearch} title="search">

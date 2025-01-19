@@ -2,6 +2,7 @@ import usePaginationContext from '@/hooks/usePaginationContext';
 import styles from '@/style/components/pagination/pagination.module.css';
 
 export default function Pagination() {
+  //TODO : Usar flex 1 para aumentar o segundo botão
   const { currentPage, setCurrentPage, totalPages } = usePaginationContext();
 
   const generatePageNumbers = () => {

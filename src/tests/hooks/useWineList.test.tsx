@@ -5,6 +5,7 @@ import { renderHook, waitFor } from '@testing-library/react';
 import axios from 'axios';
 
 describe('useWineList - hook', () => {
+  //TODO : Melhorar o teste de acordo com o curso
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {

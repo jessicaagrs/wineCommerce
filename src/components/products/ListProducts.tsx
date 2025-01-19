@@ -8,6 +8,7 @@ import Pagination from '../pagination/Pagination';
 import ProductItem from './ProductItem';
 
 export default function ListProducts() {
+  //TODO : Implementar a exibição do erro
   const { currentPage, totalPages } = usePaginationContext();
   const { data, error, isError, isPending } = useWineList(currentPage);
 
@@ -22,7 +23,7 @@ export default function ListProducts() {
       <div className={styles.containerList}>
         {data?.map((wine) => <ProductItem key={wine.id} wine={wine} />)}
       </div>
-      {totalPages > 1 && <Pagination />}
+      {(totalPages > 1 && currentPage > 0) && <Pagination />}
     </div>
   );
 }

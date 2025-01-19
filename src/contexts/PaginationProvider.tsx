@@ -6,9 +6,11 @@ export const PaginationContext = createContext({
   currentPage: 0,
   totalPages: 0,
   typeFilter: TypeFilter.NOFILTER,
+  search: '',
   setCurrentPage: (value: number) => {},
   setTypeFilter: (value: TypeFilter) => {},
   setTotalPages: (value: number) => {},
+  setSearch: (value: string) => {},
 });
 
 interface ProviderProps {
@@ -16,9 +18,10 @@ interface ProviderProps {
 }
 
 export function PaginationContextProvider({ children }: ProviderProps) {
-  const [currentPage, setCurrentPage] = useState(15);
+  const [currentPage, setCurrentPage] = useState(1);
   const [typeFilter, setTypeFilter] = useState(TypeFilter.NOFILTER);
   const [totalPages, setTotalPages] = useState(0);
+  const [search, setSearch] = useState('');
 
   const value = useMemo(
     () => ({
@@ -28,6 +31,8 @@ export function PaginationContextProvider({ children }: ProviderProps) {
       setTypeFilter,
       totalPages,
       setTotalPages,
+      search,
+      setSearch,
     }),
     [currentPage, typeFilter, totalPages],
   );

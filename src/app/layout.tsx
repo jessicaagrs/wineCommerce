@@ -18,6 +18,17 @@ export const metadata: Metadata = {
   description: 'Loja virtual de vinhos',
 };
 
+//TODO : Retirar o DefaultProvider
+//TODO : Criar teste do campo pesquisa
+//TODO : Criar teste do carrinho
+//TODO : Criar teste do filtro
+//TODO : Criar teste exibição dos produtos
+//TODO : Criar teste da paginação
+//TODO : Ajustar responsividade
+//TODO : Arrumar erros deploy
+//TODO : Fazer rodar testes deploy
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

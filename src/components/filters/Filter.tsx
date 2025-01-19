@@ -2,6 +2,7 @@ import styles from '@/style/components/filters/filter.module.css';
 import { RadioButton } from './RadioButton';
 
 export default function Filter() {
+  // TODO : Implementar a lógica de filtragem por preço
   return (
     <div className={styles.container}>
       <div className={styles.title}>
