@@ -1,4 +1,5 @@
 'use client';
+import ErrorBoundary from '@/components/errorBoundary/ErrorBoundary';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 type DefaultProviderProps = {
@@ -9,6 +10,10 @@ export default function DefaultProvider(props: Readonly<DefaultProviderProps>) {
   const client = new QueryClient();
 
   return (
-    <QueryClientProvider client={client}>{props.children}</QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={client}>
+        {props.children}
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }

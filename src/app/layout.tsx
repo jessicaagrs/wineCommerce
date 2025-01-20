@@ -1,3 +1,4 @@
+import DefaultProvider from '@/contexts/DefaultProvider';
 import '@/style/globals.css';
 import type { Metadata } from 'next';
 import { Poppins, Roboto } from 'next/font/google';
@@ -25,7 +26,6 @@ export const metadata: Metadata = {
 //TODO : Ajustar responsividade
 //TODO : Arrumar erros deploy
 //TODO : Fazer rodar testes deploy
-//TODO : tratamento de erros
 
 export default function RootLayout({
   children,
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${roboto.className} ${poppins.className} defaultPage`}>
-        {children}
+        <DefaultProvider>{children}</DefaultProvider>
       </body>
     </html>
   );

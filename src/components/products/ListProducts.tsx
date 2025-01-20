@@ -8,9 +8,8 @@ import Pagination from '../pagination/Pagination';
 import ProductItem from './ProductItem';
 
 export default function ListProducts() {
-  //TODO : Implementar a exibição do erro
   const { currentPage, totalPages } = usePaginationContext();
-  const { data, error, isError, isPending } = useWineList(currentPage);
+  const { data, isPending } = useWineList(currentPage);
 
   if (isPending) return <Spinner />;
 

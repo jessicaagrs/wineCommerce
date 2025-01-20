@@ -19,8 +19,8 @@ export default function useWineList(
     queryFn: getWineList,
   });
 
-  useEffect(() => {
-    if (data) {
+  const getTotalPages = (data: Wine[]) => {
+    try {
       const totalPages = data.length;
       setTotalPages(Math.ceil(totalPages / limit));
 
@@ -29,9 +29,15 @@ export default function useWineList(
         : [];
 
       setContent(paginatedData);
+    } catch (error: any) {
+      throw new Error('Erro ao criar as páginas');
+    }
+  };
 
+  const filterData = () => {
+    try {
       if (typeFilter !== TypeFilter.NOFILTER) {
-        const filteredData = paginatedData?.filter(
+        const filteredData = content?.filter(
           (wine) =>
             parseInt(wine.rating.average) < parseInt(typeFilter.toString()),
         );
@@ -44,6 +50,15 @@ export default function useWineList(
         );
         setContent(filteredData);
       }
+    } catch (error: any) {
+      throw new Error('Erro ao filtrar dados da página');
+    }
+  };
+
+  useEffect(() => {
+    if (data) {
+      getTotalPages(data);
+      filterData();
     }
   }, [data, limit, setTotalPages, setContent, page, typeFilter, search]);
 

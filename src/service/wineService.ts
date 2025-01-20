@@ -1,4 +1,3 @@
-import ApiError from '@/service/model/error';
 import { Wine } from '@/types/wineModel';
 import axios from 'axios';
 
@@ -10,13 +9,6 @@ export default async function getWineList() {
 
     return response.data;
   } catch (error) {
-    if (axios.isAxiosError(error)) {
-      throw new ApiError(
-        error.response?.data?.message || 'Erro desconhecido',
-        error.response?.status ?? 500,
-        error.response?.data || null,
-      );
-    }
-    throw error;
+    throw new Error('Erro ao buscar a lista de vinhos');
   }
 }
