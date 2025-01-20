@@ -1,4 +1,3 @@
-import DefaultProvider from '@/contexts/DefaultProvider';
 import '@/style/globals.css';
 import type { Metadata } from 'next';
 import { Poppins, Roboto } from 'next/font/google';
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
   description: 'Loja virtual de vinhos',
 };
 
-//TODO : Retirar o DefaultProvider
 //TODO : Criar teste do campo pesquisa
 //TODO : Criar teste do carrinho
 //TODO : Criar teste do filtro
@@ -27,7 +25,7 @@ export const metadata: Metadata = {
 //TODO : Ajustar responsividade
 //TODO : Arrumar erros deploy
 //TODO : Fazer rodar testes deploy
-
+//TODO : tratamento de erros
 
 export default function RootLayout({
   children,
@@ -36,8 +34,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className} ${poppins.className} body`}>
-        <DefaultProvider>{children}</DefaultProvider>
+      <body className={`${roboto.className} ${poppins.className} defaultPage`}>
+        {children}
       </body>
     </html>
   );
